@@ -1,38 +1,130 @@
-.App {
-  text-align: center;
+:root {
+  --background: #161616;
+  --white: #fff;
+  --yellow: #fba53a;
+  --violet: #405ec5;
+  --dark-gray: #232323;
+  --gray: #808080;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  background-color: var(--background);
+  color: var(--white);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 70%;
+  padding: 1rem;
+  margin: auto;
 }
 
-.App-link {
-  color: #61dafb;
+.images-container {
+  margin: 0.5rem;
+  flex-basis: 50%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.price-details {
+  padding: 1rem 2rem;
+  margin: 0.5rem;
+  flex-basis: 50%;
+  border-top: 0.1rem solid var(--gray);
+  background-color: var(--dark-gray);
+}
+
+.price-details h1 {
+  padding: 1rem 0;
+  color: var(--yellow);
+}
+
+.main-image {
+  height: fit-content;
+}
+
+.other-images {
+  display: flex;
+  flex-wrap: wrap;
+  height: 50%;
+}
+
+.price {
+  margin: 1.5rem 0;
+  font-size: 1.1rem;
+}
+
+.buy {
+  display: flex;
+  align-items: center;
+}
+
+.total-qty {
+  margin-top: 1rem;
+  font-size: 0.7rem;
+  color: var(--gray);
+}
+
+.quantity {
+  font-size: 0.8rem;
+  padding: 0.5rem;
+  margin-right: 1rem;
+  border: 0.1rem solid var(--gray);
+}
+
+hr {
+  margin: 1rem 0;
+  border-color: var(--gray);
+}
+
+.image {
+  padding: 0 1rem 1rem 1rem;
+  flex-basis: 50%;
+}
+
+.button {
+  padding: 0.6rem 1.5rem;
+  cursor: pointer;
+  font-weight: bold;
+  color: var(--white);
+  border-radius: 0.2rem;
+  background-color: var(--violet);
+  border: 0.1rem solid var(--violet);
+}
+
+.detail-heading {
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.detail {
+  color: var(--gray);
+  font-size: 0.8rem;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .button:hover {
+    transition: 0.8s;
+    color: var(--background);
+    background-color: var(--yellow);
+    border: 0.1rem solid var(--yellow);
   }
-  to {
-    transform: rotate(360deg);
+}
+
+html {
+  font-family: sans-serif;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    display: block;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
   }
 }
